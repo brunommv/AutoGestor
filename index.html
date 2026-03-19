@@ -770,29 +770,6 @@ function handleGoogleCredential(response){
 function enterDemo(){
   DEMO_MODE=true;
   loginSuccess({name:'Usuário Demo',email:'demo@autogestor.app',picture:''});
-  if(S.cars.length===0){
-    S.cars=[
-      {id:'c1',nome:'Gol Prata',modelo:'VW Gol G6',placa:'BRA-2E19',ano:'2018',cor:'Prata',emoji:'🚗',km:'92000',comb:'Flex'},
-      {id:'c2',nome:'HB20 Branco',modelo:'Hyundai HB20',placa:'DEF-5678',ano:'2021',cor:'Branco',emoji:'🚙',km:'38500',comb:'Flex'},
-    ];
-    S.maintenances={
-      c1:[
-        {id:'m1',tipo:'🛢️ Troca de Óleo',   data:'2024-09-10',valor:180,proxima:'2025-03-10',km:82000,local:'Auto Center Silva',obs:'5W30 sintético — próxima em 6 meses ou 10.000km'},
-        {id:'m2',tipo:'🛑 Freios / Pastilhas',data:'2024-07-15',valor:450,proxima:'2026-07-15',km:79500,local:'Mecânica do João',obs:'Pastilhas dianteiras e traseiras'},
-        {id:'m3',tipo:'📋 Vistoria DETRAN',   data:'2024-01-20',valor:120,proxima:'2025-01-20',km:75000,local:'Detran SP',obs:'Aprovado com ressalva no farol'},
-        {id:'m4',tipo:'🔄 Pneus / Calibragem',data:'2024-11-05',valor:800,proxima:'2028-11-05',km:88000,local:'Pneustore',obs:'4 pneus Michelin Primacy'},
-      ],
-      c2:[
-        {id:'m5',tipo:'🛢️ Troca de Óleo',data:'2025-01-05',valor:220,proxima:'2025-07-05',km:36000,local:'Concessionária Hyundai',obs:'0W20 — dentro da garantia'},
-        {id:'m6',tipo:'🔧 Revisão Geral',  data:'2024-11-12',valor:890,proxima:'2025-11-12',km:35000,local:'Concessionária Hyundai',obs:'Revisão de 30.000km'},
-      ]
-    };
-    S.docs={
-      c1:{ipva:{data:'2026-01-31',valor:1240},seguro:{data:'2025-08-15',valor:2100},crlv:{data:'2026-01-31',valor:0}},
-      c2:{ipva:{data:'2026-02-28',valor:980}, seguro:{data:'2025-12-01',valor:1800},crlv:{data:'2026-02-28',valor:0}},
-    };
-    saveS();
-  }
   render();
 }
 
